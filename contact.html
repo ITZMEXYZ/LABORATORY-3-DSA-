@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body class="contact">
+    <h1>Contact Me</h1>
+
+    <!-- Circular Profile Image -->
+    <img src="{{ contact.image }}" alt="Profile picture">
+
+    <!-- Contact Information -->
+    <h1>{{ contact.name }}</h1>
+    <h2>Phone Number: {{ contact.phone }}</h2>
+    <h2>Email: {{ contact.email }}</h2>
+    <h2>Facebook: {{ contact.facebook }}</h2>
+    <h2>GitHub: {{ contact.github }}</h2>
+
+    <div>
+        <button onclick="history.back()">Back to Home</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Page</title>
+    <title>{% block title %}My Website{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body class="convert-page"> 
+
+    <nav>
+        <div class="nav-container">
+            <div class="nav-logo">PORTFOLIO</div>
+            <div class="nav-links">
+                <a class="active" href="/">Home</a>
+                <a href="/profile">Profile</a>
+                <a href="/works">Works</a>
+                <a href="/contact">Contact Me</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <section class="content">               
+        <h1>YOUKOSO</h1>
+        <h1>Welcome to my Website</h1>
+        <img src="{{ url_for('static', filename='images/zy.jpg.jpg') }}" alt="My profile picture" width="250" height="250">
+    </section>
+
+    <section class="message">               
+        <h1>HI I'M ZY</h1>
+        <h2>
+            As an aspiring software engineer I want to make applications and websites that's more interactive and easy to use and learn more things that will help me grow my career
+        </h2>
+    </section>
+
+</body>
+</html>
