@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request
+import math, os
 
 app = Flask(__name__)
 
@@ -41,8 +42,6 @@ def contact():
     return render_template('contact.html', contact=contact_info, active_page='contact')
 
 
-
-
 @app.route('/touppercase', methods=['GET', 'POST'])
 def uppercase():
     result = None
@@ -51,6 +50,7 @@ def uppercase():
         result = input_string.upper()
     return render_template('touppercase.html', result=result)
 
+
 @app.route('/areaofcircle', methods=['GET', 'POST'])
 def area_of_circle():
     area = None
@@ -58,6 +58,7 @@ def area_of_circle():
         radius = float(request.form.get('radius', 0))
         area = 3.14 * (radius ** 2)
     return render_template('areaofcircle.html', area=area)
+
 
 @app.route('/areaoftriangle', methods=['GET', 'POST'])
 def area_of_triangle():
@@ -68,9 +69,11 @@ def area_of_triangle():
         area = 0.5 * base * height
     return render_template('areaoftriangle.html', area=area)
 
+
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port, debug=True)
+
 
 
 
