@@ -1,22 +1,18 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Welcome to my Profile</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-</head>
+{% extends "base.html" %}
 
-<body class="profile">
+{% block title %}Profile{% endblock %}
+
+{% block content %}
+<section class="profile-section">
     <h1>PROFILE</h1>
 
-    <img src="{{ profile.image }}" alt="Profile picture">
+    <img src="{{ profile.image }}" alt="Profile picture" class="profile-img">
 
     <div class="message">
         <h1>{{ profile.name }}</h1>
-        <h2>{{ profile.course }}</h2>
-        <h2>{{ profile.year }}</h2>
-        <h2>{{ profile.description }}</h2>
+        <h3>{{ profile.course }}</h3>
+        <h3>{{ profile.year }}</h3>
+        <p>{{ profile.description }}</p>
     </div>
-
-    <button onclick="history.back()">Back to Home</button>
-</body>
-</html>
+</section>
+{% endblock %}
