@@ -10,33 +10,41 @@
 <body class="linkedlist-page">
     <h1>Linked List</h1>
 
-    <form method="POST">
+    <form method="POST" class="linkedlist-form">
         <input type="text" name="data" placeholder="Enter data" required>
-        <button type="submit" name="add_begin">Add in Beginning</button>
-        <button type="submit" name="add_last">Add in Last</button>
-        <button type="submit" name="remove_begin">Remove Beginning</button>
-        <button type="submit" name="remove_last">Remove Last</button>
+
+        <div class="button-group">
+            <button type="submit" name="add_begin">Add in Beginning</button>
+            <button type="submit" name="add_last">Add in Last</button>
+            <button type="submit" name="remove_begin">Remove Beginning</button>
+            <button type="submit" name="remove_last">Remove Last</button>
+            <button type="submit" name="clear_list" class="clear-btn">Clear Result</button>
+        </div>
+
+        <div class="linkedlist-box" id="resultBox">
+            {% if items %}
+                <p>
+                    {% for item in items %}
+                        {{ item }}{% if not loop.last %} → {% endif %}
+                    {% endfor %}
+                    → None
+                </p>
+            {% else %}
+                <p></p>
+            {% endif %}
+        </div>
     </form>
-
-    <h3>LIST OUTPUT</h3>
-
-    {% if items %}
-    <div class="linkedlist-box">
-        <p>
-            {% for item in items %}
-                {{ item }}{% if not loop.last %} → {% endif %}
-            {% endfor %}
-            → None
-        </p>
-    </div>
-    {% else %}
-    <div class="linkedlist-box empty">The list is empty.</div>
-    {% endif %}
 
     <div>
         <a href="/works">
             <button type="button">Back to Work</button>
         </a>
     </div>
+
+    <script>
+        function clearResult() {
+            document.getElementById("resultBox").innerHTML = "<p></p>";
+        }
+    </script>
 </body>
 </html>
