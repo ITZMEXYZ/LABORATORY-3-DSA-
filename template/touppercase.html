@@ -4,24 +4,31 @@
     <title>Convert to Uppercase</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
-<body>
+<body class="uppercase-page">
+
     <h1>Words Converter</h1>
 
-    <form action="/touppercase" method="post">
-        <label for="inputString">Enter a string:</label>
-        <input type="text" id="inputString" name="inputString">
+    <div class="uppercase-container">
+        <form action="/touppercase" method="post">
+            <label for="inputString">Enter a Sentence:</label>
+            <input type="text" id="inputString" name="inputString" required>
 
-        <input type="submit" value="Convert">
-    </form>
+            <input type="submit" value="Convert">
 
-
-    <div class="result-box">
-        {{ result }}
+            {% if result %}
+            <div class="result-box">
+                {{ result }}
+            </div>
+            {% endif %}
+            
+        </form>
     </div>
 
-    
     <div>
-        <button onclick="history.back()">Back to Work</button>
+        <a href="/works">
+            <button type="button">Back to Work</button>
+        </a>
     </div>
+
 </body>
 </html>
