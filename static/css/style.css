@@ -12,7 +12,6 @@ body {
 }
 
 /*    NAV DOCK   */
-
 nav {
     width: 100%;
     background-color: black;
@@ -59,13 +58,14 @@ nav {
     transform: scale(1.05);
 }
 
-/*    INDEX   */
+
+/*    INDEX PAGE  */
 .content {
     margin-top: 50px;
 }
 
 .content h1 {
-    font-size: 36px;
+    font-size: 40px;
     color: #fff;
     margin-bottom: 10px;
 }
@@ -78,7 +78,6 @@ nav {
     height: 250px;
     object-fit: cover;
 }
-
 
 .message {
     margin: 60px auto;
@@ -102,7 +101,18 @@ nav {
 }
 
 
-/* ---------- PROFILE PAGE ---------- */
+/*  Profile Page   */
+.profile-section {
+    background-color: black;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+}
+
 .message {
     margin: 40px auto;
     max-width: 800px;
@@ -117,34 +127,22 @@ nav {
 }
 
 .message h1 {
+    color:white;
     margin-bottom: 20px;
 }
 
 .message h2 {
     font-weight: normal;
+    color:white;
     margin-bottom: 20px;
 }
 
-.message button:hover {
-    background-color: darkgrey;
-}
-
-.message button {
-    margin-top: 20px;
-    background-color: grey;
+.message p {
+    font-size: 1em;
     color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: 0.3s;
+    margin-top: 15px;
+    line-height: 1.5;
 }
-
-.message button:hover {
-    background-color: darkgrey;
-}
-
 
 .profile img {
     margin-top: 30px;
@@ -155,98 +153,25 @@ nav {
     object-fit: cover;
 }
 
-.profile button {
-    position: fixed;
-    top: 20px;        
-    left: 50px;             
-    background-color: grey;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-weight: bold;
-    font-size: 18px;
-    border-radius: 12px;
-    cursor: pointer;
-    text-decoration: none;
-    transition: 0.3s;
-}
 
-.profile button:hover {
-    background-color: darkgrey;
-}
-
-
-
-
-
-/* CONTACT PAGE */
-.contact {
-    background-color: black;
-    color: white;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    padding: 60px 20px;
-}
-
-.contact h1 {
-    color: grey;
-    font-size: 2.2em;
-    margin-bottom: 20px;
-}
-
-
-.contact button {
-    position: fixed;
-    top: 20px;        
-    left: 50px;             
-    background-color: grey;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-weight: bold;
-    font-size: 18px;
-    border-radius: 12px;
-    cursor: pointer;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.contact button:hover {
-    background-color: grey;
-}
-
-.contact img {
-    width: 400px;           
-    height: 400px;       
-    border-radius: 50%;     
-    object-fit: cover;    
-    border: 5px solid grey;
-    display: block;
-    margin: 20px auto;
-}
-
-
-
-/*     WORKS PAGE  */
+/* WORKS PAGE */
 #works-page {
     background-color: black;
     color: white;
     font-family: Arial, sans-serif;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center; 
-    justify-content: center; 
+    justify-content: flex-start;
     text-align: center;
-    position: relative;
-    padding: 0 40px;
+    padding: 80px 40px 40px;
 }
 
 #works-page h1 {
     color: grey;
     font-size: 2.5em;
-    margin-bottom: 10px;
-    margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 .work-buttons {
@@ -296,190 +221,229 @@ nav {
     text-decoration: none;
     transition: 0.3s;
 }
+
 #back-btn:hover {
     background-color: grey;
     transform: scale(1.05);
 }
 
 
+/* CONTACT PAGE */
+.contact {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.contact h1 {
+    color: white;
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.contact img {
+    width: 400px;           
+    height: 400px;       
+    border-radius: 50%;     
+    object-fit: cover;    
+    border: 5px solid grey;
+    display: block;
+    margin: 20px auto;
+}
+
+.h2 {
+    font-size: 40px;  
+    font-weight: bold;
+    color: white;      
+    margin: 15px 0;   
+}
+
+.p {
+    font-size: 20px;  
+    line-height: 1.8;
+    color: white;     
+}
+
 /*  AREA OF CIRCLE PAGE  */
 .area-circle {
-    background-color: #000000; 
+    background-color: #000; 
     text-align: center;
     padding: 60px 20px;
     font-family: Arial, sans-serif;
-    color: #333;
+    color: white;
+    min-height: 100vh;
 }
 
 .area-circle h1 {
     color: grey;
-    font-size: 2em;
-    margin-bottom: 20px;
+    font-size: 2.5em;
+    margin-bottom: 25px;
 }
 
 .area-circle form {
-    background-color: #fff8e1;
-    border: 2px solid grey;
-    padding: 30px;
+    background-color: white;
+    padding: 30px 40px;
     border-radius: 15px;
     display: inline-block;
     text-align: left;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+    color: white;
 }
 
 .area-circle label {
     display: block;
     font-weight: bold;
     margin-bottom: 10px;
-    color: #444;
+    color: grey;
 }
 
 .area-circle input[type="number"] {
     width: 100%;
-    padding: 8px;
+    padding: 10px;
     margin-bottom: 15px;
-    border: 1px solid grey;
+    border: 2px solid #f1c40f;
     border-radius: 8px;
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.area-circle input[type="number"]:focus {
+    border-color: #b45309;
+    box-shadow: 0 0 5px #b45309;
 }
 
 .area-circle input[type="submit"] {
     background-color: #f1c40f;
-    color: white;
+    color: #333;
     border: none;
-    padding: 10px 20px;
+    padding: 20px 20px;
     border-radius: 8px;
     cursor: pointer;
-    transition: 0.3s;
+    font-weight: bold;
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.2s;
+    width: 100%;
+    display: block;
+    margin-top: 10px;
+
 }
 
 .area-circle input[type="submit"]:hover {
-    background-color: #ffffff;
+    background-color: #b45309;
+    color: white;
+    transform: scale(1.05);
 }
 
 .area-circle p {
-    margin-top: 20px;
+    margin-top: 25px;
     font-size: 18px;
     font-weight: bold;
-    color: #ffffff;
+    color: #ffcc66;
 }
 
 .area-box {
-    background-color: #fff8e1;
+    background-color: #111;
     border: 2px solid #f1c40f; 
     border-radius: 12px;
     padding: 25px 40px;   
     margin: 40px auto;    
-    width: 400px;             
+    width: 100%;             
     max-width: 90%;          
     font-weight: bold;
     font-size: 22px;         
-    color: #333;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    color: #ffcc66;
+    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.1);
     text-align: center;       
 }
 
-.area button {
+.area-circle button {
     margin-top: 20px;                      
-    background-color: grey;
-    color: white;
+    background-color: #f1c40f;
+    color: #333;
     border: none;
-    padding: 16px 20px;
+    padding: 12px 20px;
     font-size: 18px;
     border-radius: 8px;
     cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 .area-circle button:hover {
-    background-color: grey;
+    background-color: #b45309;
+    color: white;
+    transform: scale(1.05);
 }
 
 
-/*   AREA OF TRIANGLE PAGE  */
-body {
-    background-color: #000000; 
-    font-family: Arial, sans-serif;
-    text-align: center;
-    padding: 50px;
-    color: #333;
-}
-
-.area-triangle h1 {
+/* AREA OF TRIANGLE PAGE */
+.area-triangle {
+    background-color: #000;
     color: grey;
-    font-size: 2em;
-    margin-bottom: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    padding: 60px 20px;
+    min-height: 100vh;
 }
 
-.area-triangle form {
-    background-color: #fff8e1;
-    border: 2px solid #f1c40f;
-    padding: 20px;
-    border-radius: 12px;
+.triangle-container {
     display: inline-block;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    width: 400px;
-    height: 400px;
-    justify-content: space-between;
-    text-align: left;      
+    background-color: black;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: left;
 }
 
-.area-triangle label {
+.triangle-container label {
     display: block;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #444;
+    margin-bottom: 5px;
+    font-size: 1em;
 }
 
-.area-triangle input[type="number"] {
-    padding: 12px;
+.triangle-container input[type="number"] {
     width: 100%;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    padding: 10px;
     margin-bottom: 15px;
+    border-radius: 8px;
+    border: 2px solid #f1c40f;
+    border-radius: 8px;
+    outline: none;
 }
 
-.area-triangle input[type="submit"] {
-    background-color: grey;
+
+.triangle-container input[type="submit"] {
+    background-color: #f1c40f;
+    color: black;
     border: none;
-    color: white;
-    padding: 16px 16px;
+    padding: 20px 20px;
     border-radius: 8px;
     cursor: pointer;
-    transition: 0.3s;
-    margin-top: 20px;
+    display: block;
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
     width: 100%;
 }
 
-.area-triangle input[type="submit"]:hover {
-    background-color: darkgrey;
-}
-
-.area-triangle .area-box {
-    background-color: #fff8e1;
-    border: 2px solid #f1c40f;
-    border-radius: 12px;
-    padding: 15px 20px;
-    margin: 20px auto;
-    width: fit-content;
-    font-weight: bold;
-    font-size: 18px;
-    color: #333;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
-.area-triangle button {
-    margin-top: 20px;
-    background-color: grey;
+.triangle-container input[type="submit"]:hover {
+    background-color: #b45309;
     color: white;
-    border: none;
-    padding: 16px 20px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 18px;
+    transform: scale(1.05);
 }
 
-.area-triangle button:hover {
-    background-color: darkgrey;
+.result-box {
+    margin-top: 15px;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 8px;
+    color: yellow;
+    text-align: center;
 }
+
 
 /* Convert to Uppercase Page*/
 body {
@@ -516,25 +480,36 @@ label {
 }
 
 input[type="text"] {
-    padding: 12px;
-    width: 200px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-input[type="submit"] {
-    background-color: grey;
-    border: none;
-    color: white;
-    padding: 16px 16px;
-    border-radius: 8px;
-    margin-top: 100px;
-    cursor: pointer;
+    width: 100%;           
+    padding: 20px 20px;       
+    margin-bottom: 20px;              
+    border: 2px solid #f1c40f;
+    border-radius: 8px;              
+    background-color: white;    
+    color: black;      
+    font-size: 16px;                  
+    outline: none;
     transition: 0.3s;
 }
 
+input[type="submit"] {
+    background-color: #f1c40f;
+    color: #333;        
+    border: none;
+    padding: 20px 20px;     
+    border-radius: 8px;               
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;     
+    width: 100%;           
+    margin-top: 10px;        
+    transition: background-color 0.3s, transform 0.2s;
+}
+
 input[type="submit"]:hover {
-    background-color: grey;
+    background-color: #b45309;
+    color: white;
+    transform: scale(1.05)
 }
 
 .result-box {
@@ -563,4 +538,200 @@ button {
 
 button:hover {
     background-color: grey;
+}
+
+
+/*  LINKED LIST PAGE   */
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    text-align: center;
+    padding: 50px;
+    color: #333;
+}
+
+form {
+    margin-bottom: 30px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 100%;
+    border: 2px solid #f1c40f;
+    border-radius: 8px;
+    outline: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #b45309;
+    box-shadow: 0 0 5px #b45309;
+}
+
+button {
+    padding: 10px 18px;
+    margin: 5px;
+    border: none;
+    background-color: #f1c40f;
+    color: #333;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #b45309;
+    color: white;
+    transform: scale(1.05);
+}
+
+h1 {
+    color: grey;
+    font-size: 36px;
+    margin-bottom: 25px;
+}
+
+h3 {
+   color: grey;
+    font-size: 24px;
+    margin-top: 40px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.linkedlist-box {
+    background-color: #fff8e1;
+    border: 2px solid #f1c40f;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px auto;
+    font-size: 18px;
+    color: #333;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    width: 100%;  
+    min-height: 50px;     
+    overflow-x: auto;  
+    white-space: nowrap; 
+}
+
+.linkedlist-box.empty {
+    background-color: #fff3cd;
+    color: #888;
+    font-style: italic;
+}
+
+.empty {
+    color: #888;
+    font-style: italic;
+}
+
+.removed {
+    color: #a33;
+    font-weight: bold;
+}
+
+button[name="clear_list"] {
+    background-color: #f1c40f;
+    color: #333;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button[name="clear_list"]:hover {
+    background-color: #f1c40f;
+    transform: scale(1.05);
+}
+
+
+/* INFIX TO POSTFIX PAGE  */
+.infix-postfix {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+}
+
+.infix-postfix h1 {
+    color: grey;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.converter-box {
+    display: inline-block;
+    background-color: black;
+    padding: 30px 40px;
+    border-radius: 15px;
+}
+
+.converter-box input[type="text"] {
+    padding: 15px;
+    width: 100%;
+    border-radius: 8px;
+    border: 2px solid #f1c40f;
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    margin-bottom: 15px;
+    outline: none;
+}
+
+.converter-box button {
+    background-color: #f1c40f;
+    color: black;
+    padding: 20px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 10px;
+    width: 100%;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.converter-box button:hover {
+    background-color: #f1c40f ;
+    transform: scale(1.05);
+}
+
+.result-box {
+    margin-top: 20px;
+    background-color: white;
+    color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 1.2em;
+    min-width: 300px;
+    border: 1px solid #f1c40f;
+}
+
+.back-btn {
+    margin-top: 40px;
+    background-color: #f1c40f;
+    color: #333;
+    border: none;
+    padding: 14px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.back-btn:hover {
+    background-color: #b45309;
+    color: white;
+    transform: scale(1.05);
 }
