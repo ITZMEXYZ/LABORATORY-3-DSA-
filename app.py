@@ -96,7 +96,42 @@ def linkedlist():
         elif 'remove_last' in request.form and linked_list:
             linked_list.pop()
 
+        elif 'clear_list' in request.form:
+            linked_list.clear()
+
     return render_template('linkedlist.html', items=linked_list)
+
+@app.route('/infixtopostfix', methods=['GET', 'POST'])
+def infixtopostfix():
+    result = None
+
+    def infix_to_postfix(expr):
+        stack, output = [], ""
+        prec = {'+': 1, '-': 1, '*': 2, '/': 2, '^': 3}
+
+        for c in expr:
+            if c.isalnum():
+                output += c
+            elif c == '(':
+                stack.append(c)
+            elif c == ')':
+                while stack and stack[-1] != '(':
+                    output += stack.pop()
+                stack.pop()
+            else:
+                while stack and prec.get(stack[-1], 0) >= prec.get(c, 0):
+                    output += stack.pop()
+                stack.append(c)
+
+        while stack:
+            output += stack.pop()
+        return output
+
+    if request.method == 'POST':
+        expr = request.form.get('expression', '')
+        result = infix_to_postfix(expr)
+
+    return render_template('infixtopostfix.html', result=result)
 
 
 if __name__ == "__main__":
