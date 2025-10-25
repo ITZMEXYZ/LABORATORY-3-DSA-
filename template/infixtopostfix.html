@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Infix to Postfix Converter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="infix-postfix">
+    <h1>Infix To Postfix</h1>
+
+    <div class="converter-box">
+        <form method="POST">
+            <label for="height">Enter the height:</label>
+            <input type="text" name="expression" placeholder="Enter the Equation" required>
+
+            <button type="submit">Convert to Postfix</button>
+
+            <div class="result-box">
+                {% if result %}
+                    <p>{{ result }}</p>
+                {% endif %}
+            </div>
+        </form>
+    </div>
+
+    <div>
+        <a href="/works">
+            <button type="button" class="back-btn">Back to Work</button>
+        </a>
+    </div>
+</body>
+</html>
